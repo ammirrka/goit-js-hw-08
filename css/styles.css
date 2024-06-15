@@ -1,0 +1,20 @@
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  display: block;
+  transition: .2s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ul.gallery {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-image:hover{
+    width: 376px;
+    height: 208px;
+}
