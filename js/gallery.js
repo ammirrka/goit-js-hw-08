@@ -64,21 +64,12 @@ const images = [
   },
 ];
 
-<li class="gallery-item">
-  <a class="gallery-link" href="large-image.jpg">
-    <img
-      class="gallery-image"
-      src="small-image.jpg"
-      data-source="large-image.jpg"
-      alt="Image description"
-    />
-  </a>
-</li>;
-
 const container = document.querySelector('.gallery');
-const markup = images
-  .map(({ preview, original, description }) => {
-    return `<li class="gallery-item">
+
+function createMarkup(array) {
+  const markup = array
+    .map(({ preview, original, description }) => {
+      return `<li class="gallery-item">
   <a class="gallery-link" href="${original}">
     <img
       class="gallery-image"
@@ -88,7 +79,10 @@ const markup = images
     />
   </a>
 </li>`;
-  })
-  .join('');
+    })
+    .join('');
 
-console.log(markup);
+  container.innerHTML = markup;
+}
+
+createMarkup(images);
