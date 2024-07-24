@@ -1,0 +1,13 @@
+img {
+  width: 360px;
+  height: 300px;
+  display: block;
+}
+
+ul {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  justify-content: center;
+}
